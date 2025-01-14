@@ -1,97 +1,182 @@
-/* Container styling */
-div {
+/* General styling for the form container */
+.form-container {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Heading styling */
-div h1 {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 20px;
-  text-transform: capitalize;
-  font-weight: bold;
-}
-
-/* TravelForm Component Styling */
-.TravelForm {
-  width: 100%;
-  margin-top: 20px;
-}
-
-
-/* General form styling */
-form {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
 }
 
-/* Input fields styling */
-form input[type="text"],
-form input[type="number"] {
-  width: calc(100% - 20px);
+/* Styling for the form title */
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4F46E5;
+  margin-bottom: 20px;
+}
+
+/* General styling for the form inputs */
+.input-field {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: border-color 0.3s ease;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
 }
 
-form input[type="text"]:focus,
-form input[type="number"]:focus {
-  border-color: #007BFF;
-  outline: none;
-}
-
-/* Button styling */
-form button[type="submit"] {
+/* Styling for the submit button */
+.submit-button {
   width: 100%;
   padding: 12px;
-  background-color: #007BFF;
+  background-color: #4F46E5;
+  color: white;
   border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 16px;
+  border-radius: 6px;
+  font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-form button[type="submit"]:hover {
-  background-color: #0056b3;
+.submit-button:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
 }
 
-/* Placeholder styling */
-::placeholder {
-  color: #888;
-  font-style: italic;
+.submit-button:hover:not(:disabled) {
+  background-color: #3b36c2;
 }
 
-/* Form responsiveness */
-@media (max-width: 480px) {
-  form {
+/* Styling for error messages */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Styling for the recommendations container */
+.recommendations-container {
+  max-width: 100%; /* Ensure it does not exceed the container's width */
+  overflow: hidden; /* Prevent any overflowing content */
+  word-wrap: break-word; /* Break long words to prevent horizontal scrolling */
+  padding: 1rem; /* Optional: Adjust padding for spacing */
+}
+
+.recommendations-title {
+  font-size: 1.5rem; /* Optional: Adjust font size for the title */
+  font-weight: bold;
+  margin-bottom: 1rem; /* Space between title and text */
+}
+
+.recommendations-text pre {
+  white-space: pre-wrap; /* Ensures line breaks are respected */
+  word-wrap: break-word; /* Breaks long words without causing overflow */
+  font-size: 1rem; /* Optional: Adjust font size */
+  margin: 0; /* Optional: Remove any margin */
+  line-height: 1.5; /* Optional: Adjust line height for readability */
+}
+
+
+/* Styling for the link inside recommendations */
+.recommendations-text a.link {
+  color: #4F46E5;
+  text-decoration: none;
+}
+
+.recommendations-text a.link:hover {
+  text-decoration: underline;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .form-container {
       padding: 15px;
   }
 
-  form input[type="text"],
-  form input[type="number"] {
-      font-size: 12px;
+  .form-title {
+      font-size: 20px;
   }
 
-  form button[type="submit"] {
+  .input-field {
       font-size: 14px;
+  }
+
+  .submit-button {
+      font-size: 16px;
+  }
+
+  .recommendations-title {
+      font-size: 18px;
+  }
+
+  .recommendations-text {
+      font-size: 14px;
+  }
+}
+
+/* Link styling */
+.link {
+  color: #4F46E5;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+/* Overall container for the Home component */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 24px;
+}
+
+/* Styling for the heading */
+.home-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #4F46E5;
+  text-align: center;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+/* Responsive design: Heading styling on smaller screens */
+@media (max-width: 600px) {
+  .home-heading {
+      font-size: 28px;
+  }
+}
+
+/* Travel form container to ensure proper spacing */
+.travel-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for form container */
+.travel-form-container:hover {
+  transform: scale(1.02);
+}
+
+/* Mobile-friendly adjustments for the form */
+@media (max-width: 768px) {
+  .travel-form-container {
+      padding: 20px;
   }
 }

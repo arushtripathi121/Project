@@ -1,0 +1,37 @@
+|-- .gitignore
+|-- client
+    |-- .gitignore
+    |-- eslint.config.js
+    |-- index.html
+    |-- package-lock.json
+    |-- package.json
+    |-- public
+        |-- vite.svg
+    |-- README.md
+    |-- src
+        |-- App.css
+        |-- App.jsx
+        |-- assets
+            |-- react.svg
+        |-- components
+            |-- TravelForm.jsx
+        |-- index.css
+        |-- main.jsx
+        |-- pages
+            |-- Home.jsx
+        |-- router
+            |-- Router.jsx
+    |-- vite.config.js
+|-- server
+    |-- .env
+    |-- config
+        |-- db.js
+    |-- models
+        |-- Travel.js
+    |-- package-lock.json
+    |-- package.json
+    |-- routes
+        |-- travelRoutes.js
+    |-- server.js
+    |-- utils
+        |-- generative-ai.js

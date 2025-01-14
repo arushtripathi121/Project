@@ -3,9 +3,11 @@ import TravelForm from '../components/TravelForm';
 
 const Home = () => {
     return (
-        <div>
-            <h1>AI-Powered Travel Planner</h1>
-            <TravelForm />
+        <div className="home-container">
+            <h1 className="home-heading">AI-Powered Travel Planner</h1>
+            <div className="travel-form-container">
+                <TravelForm />
+            </div>
         </div>
     );
 };

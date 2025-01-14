@@ -1,25 +1,23 @@
-require('dotenv').config(); // Load environment variables
-
 const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-
-// Import the config and connect to MongoDB
+const dotenv = require('dotenv');
 const connectDB = require('./config/db');
+const travelRoutes = require('./routes/travelRoutes');  // This is where the preferences-related routes are defined
 
-// Initialize express app
+dotenv.config();
+
 const app = express();
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-
-// Connect to Database
+// Connect to database
 connectDB();
 
-// Routes
-app.use('/api/travel', require('./routes/travelRoutes'));
+// Middleware
+app.use(express.json());  // To parse JSON requests
 
-// Start Server
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Routes
+app.use('/api/travel', travelRoutes); // Travel preferences route
+
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
